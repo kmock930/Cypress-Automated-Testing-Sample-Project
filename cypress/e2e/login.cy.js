@@ -21,4 +21,9 @@ it.only("Test Admin button from Sidebar", () => {
     cy.get('.orangehrm-header-container > .oxd-button').click();
 
     cy.get('.oxd-button--secondary').click();
+
+    //assertions
+    cy.get('.oxd-userdropdown-tab', {timeout: 6000})
+        .should('have.class','oxd-userdropdown-tab')
+        .should('be.visible');
 });
